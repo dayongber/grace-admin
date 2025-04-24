@@ -1,4 +1,4 @@
-import { RuleConfigCondition, RuleConfigSeverity } from '@commitlint/types'
+// import { RuleConfigCondition, RuleConfigSeverity } from '@commitlint/types'
 import { defineConfig } from 'cz-git'
 
 export default defineConfig({
@@ -8,14 +8,15 @@ export default defineConfig({
   // Git 提交规则配置
   rules: {
     // 标题不能为空
-    'subject-empty': [RuleConfigSeverity.Error, 'never'] as const,
+    'subject-empty': [2, 'never'],
     // 类型必须小写
-    'type-case': [RuleConfigSeverity.Error, 'always', 'lower-case'] as const,
+    'type-case': [0],
+    // 'type-case': [RuleConfigSeverity.Error, 'always', 'lower-case'] as const,
     // 类型不能为空
-    'type-empty': [RuleConfigSeverity.Error, 'never'] as const,
+    'type-empty': [2, 'never'],
     // 提交类型必须在预定义的范围内
     'type-enum': [
-      RuleConfigSeverity.Error,
+      2,
       'always',
       [
         'feat', // 新增功能
@@ -30,12 +31,11 @@ export default defineConfig({
         'revert', // 回滚 commit
         'chore' // 对构建过程或辅助工具和库的更改（不影响源文件、测试用例）
       ]
-    ] as [RuleConfigSeverity, RuleConfigCondition, string[]]
+    ]
   },
 
   // 交互式提交配置
   prompt: {
-    alias: { fd: 'docs: fix typos' },
     // 交互提示文案
     messages: {
       type: '选择提交类型：',
