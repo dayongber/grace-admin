@@ -4,6 +4,7 @@ import { defineConfig } from 'cz-git'
 export default defineConfig({
   // 使用传统的 changelog 解析器
   parserPreset: 'conventional-changelog-conventionalcommits',
+  extends: ['@commitlint/config-conventional'],
   // Git 提交规则配置
   rules: {
     // 标题不能为空
