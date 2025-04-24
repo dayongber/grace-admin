@@ -1,0 +1,138 @@
+{
+  "code": 200,
+  "msg": "success",
+  "data": [
+    {
+      "path": "/dashboard",
+      "name": "dashboard",
+      "component": "/dashboard/index",
+      "meta": {
+        "icon": "HomeFilled",
+        "title": "首页",
+        "isLink": "",
+        "isHide": false,
+        "isFull": false,
+        "isAffix": true,
+        "isKeepAlive": true
+      }
+    },
+    {
+      "path": "/system",
+      "name": "system",
+      "redirect": "/system/user",
+      "meta": {
+        "icon": "Setting",
+        "title": "系统管理",
+        "isLink": "",
+        "isHide": false,
+        "isFull": false,
+        "isAffix": false,
+        "isKeepAlive": true
+      },
+      "children": [
+        {
+          "path": "/system/user",
+          "name": "user",
+          "component": "/system/user/index",
+          "meta": {
+            "icon": "User",
+            "title": "用户管理",
+            "isLink": "",
+            "isHide": false,
+            "isFull": false,
+            "isAffix": false,
+            "isKeepAlive": true
+          }
+        },
+        {
+          "path": "/system/role",
+          "name": "role",
+          "component": "/system/role/index",
+          "meta": {
+            "icon": "UserFilled",
+            "title": "角色管理",
+            "isLink": "",
+            "isHide": false,
+            "isFull": false,
+            "isAffix": false,
+            "isKeepAlive": true
+          }
+        },
+        {
+          "path": "/system/org",
+          "name": "org",
+          "component": "/system/org/index",
+          "meta": {
+            "icon": "Crop",
+            "title": "部门管理",
+            "isLink": "",
+            "isHide": false,
+            "isFull": false,
+            "isAffix": false,
+            "isKeepAlive": true
+          }
+        }
+      ]
+    },
+    {
+      "path": "/menu",
+      "name": "menu",
+      "redirect": "/menu/menu1",
+      "meta": {
+        "icon": "Grid",
+        "title": "多级菜单",
+        "isLink": "",
+        "isHide": false,
+        "isFull": false,
+        "isAffix": false,
+        "isKeepAlive": true
+      },
+      "children": [
+        {
+          "path": "/menu/menu1",
+          "name": "menu1",
+          "component": "/menu/menu1/index",
+          "meta": {
+            "icon": "Dish",
+            "title": "菜单一",
+            "isLink": "",
+            "isHide": false,
+            "isFull": false,
+            "isAffix": false,
+            "isKeepAlive": true
+          }
+        },
+        {
+          "path": "/system/menu2",
+          "name": "menu2",
+          "redirect": "/menu/menu2/index",
+          "meta": {
+            "icon": "CoffeeCup",
+            "title": "菜单二",
+            "isLink": "",
+            "isHide": false,
+            "isFull": false,
+            "isAffix": false,
+            "isKeepAlive": true
+          },
+          "children": [
+            {
+              "path": "/menu/menu2/menu3",
+              "name": "menu3",
+              "component": "/menu/menu2/menu3/index",
+              "meta": {
+                "icon": "IceTea",
+                "title": "菜单三",
+                "isLink": "",
+                "isHide": false,
+                "isFull": false,
+                "isAffix": false,
+                "isKeepAlive": true
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

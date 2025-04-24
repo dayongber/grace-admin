@@ -1,0 +1,27 @@
+# 忽略目录
+node_modules
+dist
+public
+.cache
+.temp
+build
+coverage
+logs
+
+# IDE配置
+.idea
+.vscode
+
+# 环境文件
+.env.development
+.env.production
+.env.test
+.env.local
+.env
+
+# 其他
+*.tsbuildinfo
+.DS_Store
+*.sh
+*.md
+.husky
