@@ -1,17 +1,14 @@
-// import { RuleConfigCondition, RuleConfigSeverity } from '@commitlint/types'
 import { defineConfig } from 'cz-git'
 
 export default defineConfig({
-  // 使用传统的 changelog 解析器
-  // parserPreset: 'conventional-changelog-conventionalcommits',
+  // 继承的配置
   extends: ['@commitlint/config-conventional'],
   // Git 提交规则配置
   rules: {
     // 标题不能为空
     'subject-empty': [2, 'never'],
-    // 类型必须小写
+    // 类型大小写不限制
     'type-case': [0],
-    // 'type-case': [RuleConfigSeverity.Error, 'always', 'lower-case'] as const,
     // 类型不能为空
     'type-empty': [2, 'never'],
     // 提交类型必须在预定义的范围内
@@ -61,12 +58,36 @@ export default defineConfig({
       { value: 'chore', name: '🔨 chore:    其他杂项' }
     ]
   },
-  // 跳过可选步骤（按需配置）
-  skipQuestions: ['body', 'breaking', 'footer'],
-
-  // 描述字符限制
-  subjectLimit: 72,
-
-  // 范围选择模式（可选）
-  scopes: [{ name: 'login' }, { name: 'user' }, { name: 'global' }]
+  useEmoji: false,
+  emojiAlign: 'center',
+  useAI: false,
+  aiNumber: 1,
+  themeColorCode: '',
+  scopes: [],
+  allowCustomScopes: true,
+  allowEmptyScopes: true,
+  customScopesAlign: 'bottom',
+  customScopesAlias: 'custom',
+  emptyScopesAlias: 'empty',
+  upperCaseSubject: false,
+  markBreakingChangeMode: false,
+  allowBreakingChanges: ['feat', 'fix'],
+  breaklineNumber: 100,
+  breaklineChar: '|',
+  skipQuestions: [],
+  issuePrefixes: [{ value: 'closed', name: 'closed:   ISSUES has been processed' }],
+  customIssuePrefixAlign: 'top',
+  emptyIssuePrefixAlias: 'skip',
+  customIssuePrefixAlias: 'custom',
+  allowCustomIssuePrefix: true,
+  allowEmptyIssuePrefix: true,
+  confirmColorize: true,
+  maxHeaderLength: Infinity,
+  maxSubjectLength: Infinity,
+  minSubjectLength: 0,
+  scopeOverrides: undefined,
+  defaultBody: '',
+  defaultIssues: '',
+  defaultScope: '',
+  defaultSubject: ''
 })
