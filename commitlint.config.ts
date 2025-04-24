@@ -3,7 +3,7 @@ import { defineConfig } from 'cz-git'
 
 export default defineConfig({
   // 使用传统的 changelog 解析器
-  parserPreset: 'conventional-changelog-conventionalcommits',
+  // parserPreset: 'conventional-changelog-conventionalcommits',
   extends: ['@commitlint/config-conventional'],
   // Git 提交规则配置
   rules: {
@@ -35,6 +35,7 @@ export default defineConfig({
 
   // 交互式提交配置
   prompt: {
+    alias: { fd: 'docs: fix typos' },
     // 交互提示文案
     messages: {
       type: '选择提交类型：',
