@@ -56,8 +56,7 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
           // 代理的服务地址
           target: env.VITE_APP_API_URL, // 开启代理，允许跨域请求数据
           changeOrigin: true, // 重写路径
-          rewrite: (path: string) =>
-            path.replace(new RegExp('^' + env.VITE_APP_BASE_API), '')
+          rewrite: (path: string) => path.replace(new RegExp('^' + env.VITE_APP_BASE_API), '')
         }
       }
     },
@@ -65,7 +64,7 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
       // CSS 预处理器
       preprocessorOptions: {
         scss: {
-          additionalData: `@use "@/style/variables.scss" as *;`
+          additionalData: `@use "@/styles/variables.scss" as *;`
         }
       }
     }

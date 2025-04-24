@@ -26,15 +26,15 @@
 </template>
 
 <script setup lang="ts">
-import Breadcrumb from '@/layout/components/Header/components/Breadcrumb.vue'
-import Collapse from '@/layout/components/Header/components/Collapse.vue'
-import Avatar from '@/layout/components/Header/components/Avatar.vue'
-import Fullscreen from '@/layout/components/Header/components/Fullscreen.vue'
-import Notification from '@/layout/components/Header/components/Notification.vue'
-import Theme from '@/layout/components/Header/components/Theme.vue'
-import Dark from '@/layout/components/Header/components/Dark.vue'
-import Dimension from '@/layout/components/Header/components/Dimension.vue'
-import Language from '@/layout/components/Header/components/Language.vue'
+import Breadcrumb from '@/layouts/components/Header/components/Breadcrumb.vue'
+import Collapse from '@/layouts/components/Header/components/Collapse.vue'
+import Avatar from '@/layouts/components/Header/components/Avatar.vue'
+import Fullscreen from '@/layouts/components/Header/components/Fullscreen.vue'
+import Notification from '@/layouts/components/Header/components/Notification.vue'
+import Theme from '@/layouts/components/Header/components/Theme.vue'
+import Dark from '@/layouts/components/Header/components/Dark.vue'
+import Dimension from '@/layouts/components/Header/components/Dimension.vue'
+import Language from '@/layouts/components/Header/components/Language.vue'
 </script>
 
 <style lang="scss" scoped>

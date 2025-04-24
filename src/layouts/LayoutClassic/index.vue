@@ -21,10 +21,10 @@
 </template>
 
 <script setup lang="ts">
-import Header from '@/layout/components/Header/index.vue'
-import Logo from '@/layout/components/Logo/index.vue'
-import Aside from '@/layout/components/Aside/index.vue'
-import Footer from '@/layout/components/Footer/index.vue'
+import Header from '@/layouts/components/Header/index.vue'
+import Logo from '@/layouts/components/Logo/index.vue'
+import Aside from '@/layouts/components/Aside/index.vue'
+import Footer from '@/layouts/components/Footer/index.vue'
 import { useGlobalStore } from '@/store/modules/global'
 
 const globalStore = useGlobalStore()
