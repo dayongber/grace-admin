@@ -12,7 +12,8 @@
     "lint:prettier": "prettier --write '**/*.{vue,scss,html,ts,js,json,md}'",
     "lint:stylelint": "stylelint '**/*.{vue,css,scss,html}' --fix",
     "prepare": "husky",
-    "lint:lint-staged": "lint-staged"
+    "lint:lint-staged": "lint-staged",
+    "commit": "git-cz"
   },
   "dependencies": {
     "axios": "^1.8.4",
@@ -24,11 +25,15 @@
     "vue-router": "^4.0.13"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.8.0",
+    "@commitlint/config-conventional": "^19.8.0",
     "@eslint/js": "^9.23.0",
     "@types/node": "^22.13.14",
     "@types/nprogress": "^0.2.3",
     "@vitejs/plugin-vue": "^5.2.1",
     "@vue/tsconfig": "^0.7.0",
+    "commitizen": "^4.3.1",
+    "cz-git": "^1.11.1",
     "eslint": "^9.23.0",
     "eslint-config-prettier": "^10.1.1",
     "eslint-plugin-prettier": "^5.2.5",

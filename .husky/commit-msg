@@ -1,0 +1,2 @@
+# 校验命令（适配 commitlint v9+）
+npx commitlint --config commitlint.config.ts --verbose --edit "${1}"
