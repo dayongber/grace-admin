@@ -21,6 +21,23 @@ const locale: any = {
 // 初始化主题
 const { initTheme } = useTheme()
 initTheme()
+
+// 加载动画
+onMounted(() => {
+  const loadingScreen = document.getElementById('loading-screen')
+  let removed = false
+
+  const removeLoader = () => {
+    if (removed) return
+    removed = true
+    loadingScreen?.classList.add('hide')
+    loadingScreen?.addEventListener('transitionend', loadingScreen.remove)
+  }
+  // 正常流程
+  // removeLoader()
+  // 超时强制隐藏
+  setTimeout(removeLoader, 5000)
+})
 </script>
 
 <style scoped></style>

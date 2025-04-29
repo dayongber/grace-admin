@@ -30,7 +30,7 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
 
         eslintrc: {
           // 是否自动生成 eslint 规则，生成.eslintrc-auto-import.json后设置 false
-          enabled: true
+          enabled: false
         },
         dts: 'src/types/auto-imports.d.ts'
       }), // 自动导入组件

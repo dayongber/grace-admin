@@ -1,9 +1,4 @@
-import axios, {
-  type AxiosInstance,
-  type AxiosRequestConfig,
-  AxiosError,
-  type AxiosResponse
-} from 'axios'
+import axios, { type AxiosInstance, type AxiosRequestConfig, AxiosError, type AxiosResponse } from 'axios'
 import { useUserStore } from '@/store/modules/user'
 import { ElMessage } from 'element-plus'
 import { type IResponseData } from '@/api/interface'
@@ -17,7 +12,7 @@ class RequestInstance {
 
     // 请求拦截器
     this.instance.interceptors.request.use(
-      (config) => {
+      config => {
         const userStore = useUserStore()
         if (userStore.sessionToken) {
           config.headers['Authorization'] = 'Bearer' + userStore.sessionToken
